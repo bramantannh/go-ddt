@@ -9,7 +9,7 @@ const (
 	Ewallet
 )
 
-func pay(method Paymentmenthod, loggedin bool) string {
+func Pay(method Paymentmenthod, loggedin bool) string {
 	if !loggedin {
 		return "Not Logged In"
 	}

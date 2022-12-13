@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestPay(t *testing.T) {
+func TestDDTPay(t *testing.T) {
 	tests := []struct {
 		method		Paymentmenthod
 		loggedin	bool
@@ -19,7 +19,7 @@ func TestPay(t *testing.T) {
 	}
 
 	for _, tc := range tests {
-		result := pay(tc.method, tc.loggedin)
+		result := Pay(tc.method, tc.loggedin)
 		if !reflect.DeepEqual(tc.expected, result) {
 			t.Errorf("expected \"%s\", but got \"%s\"", tc.expected, result)
 		}
